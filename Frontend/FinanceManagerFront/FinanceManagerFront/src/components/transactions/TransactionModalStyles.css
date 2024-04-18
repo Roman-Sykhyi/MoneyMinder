@@ -1,0 +1,58 @@
+.transaction-modal {
+    margin: 0 auto;
+    
+    width: 250px;
+
+    position: relative;
+   
+    display: flex;
+    flex-direction: column;
+}
+
+.transaction-modal input {
+    background-color: blueviolet;
+    border-radius: 20px;
+   
+    margin: 0.5em;
+    border-width: 0;
+}
+
+.transaction-modal input:active {
+    border-width: 1px;
+}
+
+.transaction-modal input:valid {
+    background-color: rgb(183, 245, 159);
+}
+
+.transaction-modal input:invalid {
+    background-color: rgb(245, 159, 159);
+}
+
+.modal-buttons {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.modal-buttons button {
+    border-radius: 10px;
+    border-width: 0;
+
+
+    margin: 0.5em;
+    background-color: lightgray;
+
+   
+}
+
+.transactionInputBlock {
+    display: block;
+    background-color: aqua;
+}
+
+.transactionInputBlock input {
+    position: relative;
+    display: block;
+    margin: 10px;
+}

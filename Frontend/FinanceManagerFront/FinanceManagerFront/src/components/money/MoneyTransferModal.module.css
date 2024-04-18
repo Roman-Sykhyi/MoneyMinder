@@ -1,0 +1,47 @@
+.selectorsRow {
+    display: flex;
+    justify-content: space-around;
+}
+
+.selectorColumn {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+
+
+.balance {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.balanceOutput {
+    margin-top: 5px;
+    border: 1px solid rgb(100, 100, 100);
+    width: 70%;
+    height: 24px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+
+}
+
+.sumRow {
+    margin-top: 10px;
+    display: flex;
+    justify-content: left;
+}
+
+.sumRow>div {
+    display: flex;
+    margin-right: 10px;
+    align-items: center;
+}
+
+.sumRow>input {
+    border: 1px solid rgb(100, 100, 100);
+    height: 24px;
+    border-radius: 3px;
+}

@@ -1,0 +1,17 @@
+td {
+    text-align: center;
+}
+
+.container {
+    width: 450px;
+    height: 450px;
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 20px;
+    float: right;
+}
+
+.container h1 {
+    text-align: center;
+    font-size: 2rem !important;
+}

@@ -1,0 +1,30 @@
+#balance-body {
+    width: fit-content;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: .25rem;
+    background: #0d6efd;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border: 1.8px solid #0d6efd;
+}
+
+.balance {
+    padding-left: 40px;
+    padding-right: 40px;
+    color: #fff;
+    font-weight: 600;
+}
+
+#balance-wraper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.balance-value {
+    margin-top: -6px;
+}

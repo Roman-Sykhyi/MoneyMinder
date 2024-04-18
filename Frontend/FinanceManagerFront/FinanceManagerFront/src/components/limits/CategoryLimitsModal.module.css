@@ -1,0 +1,22 @@
+.limitBtn {
+    margin-left: 30px;
+    margin-top: 15px;
+    height: 38px;
+}
+
+.dropdown {
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.limit {
+    margin-left: 5px;
+}
+
+.categorySelect {
+    margin-bottom: 5px;
+}
+
+.changeLimitBtn {
+    margin-top: 10px;
+}
