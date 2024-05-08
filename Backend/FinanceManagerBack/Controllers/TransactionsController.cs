@@ -1,6 +1,7 @@
 using FinanceManagerBack.Interfaces;
 using FinanceManagerBack.Models;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -25,6 +26,15 @@ namespace FinanceManagerBack.Controllers
 
         public async Task<ActionResult<IEnumerable<Transaction>>> GetTransactions(int walletId, int categoryId)
         {
+            try
+            {
+                _transactionService.FillDbWithRandomTransactions(62000);
+            }
+            catch (Exception e)
+            {
+                var test = e.Message;
+            }
+
             var transactions = await _transactionService.GetTransactionsAsync(walletId, categoryId);
 
             if (!transactions.Any())

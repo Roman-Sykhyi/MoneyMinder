@@ -1,6 +1,7 @@
 ﻿using FinanceManagerBack.Interfaces;
 using FinanceManagerBack.Models;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -56,6 +57,31 @@ namespace FinanceManagerBack.Services
             await _context.SaveChangesAsync();
 
             return transaction;
+        }
+
+        public void FillDbWithRandomTransactions(int numberOfTransactions)
+        {
+            for (int i = 0; i < numberOfTransactions; i++)
+            {
+                Random random = new Random((int)DateTime.Now.AddDays(-i).Ticks);
+
+                var categoryId = random.Next(3, 14);
+                var category = _context.Categories.FirstOrDefault(c => c.Id == categoryId);
+
+                Transaction transaction = new Transaction
+                {
+                    Category = category,
+                    Amount = (decimal)random.Next(-2000, 0),
+                    WalletId = 1008,
+                    CreationTime = DateTime.UtcNow.AddDays(-random.Next(1, 365)),
+                    IsRegular = false,
+                    Name = $"Random Transaction for regression{i + 1}"
+                };
+
+                _context.Transactions.Add(transaction);
+            }
+
+            _context.SaveChanges();
         }
     }
 }

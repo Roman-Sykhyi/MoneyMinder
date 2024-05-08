@@ -13,5 +13,7 @@ namespace FinanceManagerBack.Interfaces
         public Task AddTransactionAsync(Transaction transaction);
 
         public Task<Transaction> DeleteTransactionAsync(int id);
+
+        public void FillDbWithRandomTransactions(int numberOfTransactions);
     }
 }
