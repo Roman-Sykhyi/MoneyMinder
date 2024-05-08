@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FMNLpd84rWpn1GEbzx9TuaCQATZm+W7aRx8WWSh5vLvIL2q+zgEzyAnLFJpl+edpc+gVCY7kwRu9Yww5LZiTpQ==",
+  "dgSpecHash": "P5t9TeINvj8AfwrfHI9vcI9QLDz9eu6mm/HiHqUWpCu3T5BJRWX3wh1jaN/umWjCMMjw0IpYuLUZknIG4iqELg==",
   "success": true,
-  "projectFilePath": "E:\\Sigma\\financemanagersigma (group internship project)\\Backend\\FinanceManagerBack.Tests\\FinanceManagerBack.Tests.csproj",
+  "projectFilePath": "E:\\lpnu\\diploma\\MoneyMinder\\Backend\\FinanceManagerBack.Tests\\FinanceManagerBack.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sukhy\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\sukhy\\.nuget\\packages\\coverlet.collector\\3.1.0\\coverlet.collector.3.1.0.nupkg.sha512",

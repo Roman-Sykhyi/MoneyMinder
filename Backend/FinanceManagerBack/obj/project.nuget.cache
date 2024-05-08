@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6jYdGXhB9zjyrKTIF9hcPYUL/X6MURcHcvMjc4vANQlcROu9LZtgdutWpHbqiiGBuf3G0TnSgpfjn8hLuZ3mFA==",
+  "dgSpecHash": "GKFme0LoUHtyUsbzEhf/+2AAB4itIvi5nZBsBfXg0t2D8W2UFUfZ2xgkPhQhjz2nCna3xWoTPyr56ZSBjUSXrg==",
   "success": true,
-  "projectFilePath": "E:\\Sigma\\financemanagersigma (group internship project)\\Backend\\FinanceManagerBack\\FinanceManagerBack.csproj",
+  "projectFilePath": "E:\\lpnu\\diploma\\MoneyMinder\\Backend\\FinanceManagerBack\\FinanceManagerBack.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sukhy\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\sukhy\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

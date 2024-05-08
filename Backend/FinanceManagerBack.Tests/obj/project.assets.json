@@ -9040,11 +9040,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Sigma\\financemanagersigma (group internship project)\\Backend\\FinanceManagerBack.Tests\\FinanceManagerBack.Tests.csproj",
+      "projectUniqueName": "E:\\lpnu\\diploma\\MoneyMinder\\Backend\\FinanceManagerBack.Tests\\FinanceManagerBack.Tests.csproj",
       "projectName": "FinanceManagerBack.Tests",
-      "projectPath": "E:\\Sigma\\financemanagersigma (group internship project)\\Backend\\FinanceManagerBack.Tests\\FinanceManagerBack.Tests.csproj",
+      "projectPath": "E:\\lpnu\\diploma\\MoneyMinder\\Backend\\FinanceManagerBack.Tests\\FinanceManagerBack.Tests.csproj",
       "packagesPath": "C:\\Users\\sukhy\\.nuget\\packages\\",
-      "outputPath": "E:\\Sigma\\financemanagersigma (group internship project)\\Backend\\FinanceManagerBack.Tests\\obj\\",
+      "outputPath": "E:\\lpnu\\diploma\\MoneyMinder\\Backend\\FinanceManagerBack.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -9065,8 +9065,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "E:\\Sigma\\financemanagersigma (group internship project)\\Backend\\FinanceManagerBack\\FinanceManagerBack.csproj": {
-              "projectPath": "E:\\Sigma\\financemanagersigma (group internship project)\\Backend\\FinanceManagerBack\\FinanceManagerBack.csproj"
+            "E:\\lpnu\\diploma\\MoneyMinder\\Backend\\FinanceManagerBack\\FinanceManagerBack.csproj": {
+              "projectPath": "E:\\lpnu\\diploma\\MoneyMinder\\Backend\\FinanceManagerBack\\FinanceManagerBack.csproj"
             }
           }
         }

@@ -9246,11 +9246,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Sigma\\financemanagersigma (group internship project)\\Backend\\FinanceManagerBack\\FinanceManagerBack.csproj",
+      "projectUniqueName": "E:\\lpnu\\diploma\\MoneyMinder\\Backend\\FinanceManagerBack\\FinanceManagerBack.csproj",
       "projectName": "FinanceManagerBack",
-      "projectPath": "E:\\Sigma\\financemanagersigma (group internship project)\\Backend\\FinanceManagerBack\\FinanceManagerBack.csproj",
+      "projectPath": "E:\\lpnu\\diploma\\MoneyMinder\\Backend\\FinanceManagerBack\\FinanceManagerBack.csproj",
       "packagesPath": "C:\\Users\\sukhy\\.nuget\\packages\\",
-      "outputPath": "E:\\Sigma\\financemanagersigma (group internship project)\\Backend\\FinanceManagerBack\\obj\\",
+      "outputPath": "E:\\lpnu\\diploma\\MoneyMinder\\Backend\\FinanceManagerBack\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
