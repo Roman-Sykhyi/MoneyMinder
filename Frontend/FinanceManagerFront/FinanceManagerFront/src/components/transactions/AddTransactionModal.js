@@ -89,8 +89,12 @@ export default function AddTransaction(props) {
     return (
         <React.Fragment>
             <ButtonGroup>
+                <Button variant="success" style={{marginRight: "20px"}}><div style={{ width: "40px"}}><i class="fa-solid fa-chart-line"></i></div></Button>
+                
                 <Button variant="success" onClick={handlePutShow}><div style={{ width: "40px" }}>+</div></Button>
                 <Button variant="danger" onClick={handleSpentShow}><div style={{ width: "40px" }}>-</div></Button>
+
+                <Button variant="success" style={{marginLeft: "20px"}}><div style={{ width: "40px"}}><i class="fa solid fa-receipt"></i></div></Button>
             </ButtonGroup>
             <Modal show={show} onHide={handleClose} >
                 <Modal.Header closeButton>
