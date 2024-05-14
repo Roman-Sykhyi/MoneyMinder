@@ -20,11 +20,15 @@ export default function AddTransaction(props) {
     const defaultSelect = { id: -1, name: "Select category" }
     const [category, setCategory] = useState(defaultSelect)
 
+    const [showPrediction, setShowPrediction] = useState(false);
+    const [showScanReceipt, setShowScanReceipt] = useState(false);
+
     let dispatch = useDispatch();
    
     const lastTransaction = useSelector((state) => state.lastTransaction.value);
 
     const wallet = useSelector((state) => state.currentWallet.value)
+    const currentCategory = useSelector((state) => state.currentCategory.value)
 
     const handleClose = () => {
         setShow(false);
@@ -86,15 +90,49 @@ export default function AddTransaction(props) {
         }
     }
 
+    const handlePredictionShow = () => {
+        if(wallet.id === -1){
+            window.alert('You have to choose wallet first');
+            return;
+        }
+
+        if(currentCategory.id === -1) {
+            window.alert('You have to choose category first');
+            return;
+        }
+
+        setShowPrediction(true);
+    }
+
+    const handleScanReceiptShow = () => {
+        if(wallet.id === -1){
+            window.alert('You have to choose wallet first');
+            return;
+        }
+
+        if(currentCategory.id === -1) {
+            window.alert('You have to choose category first');
+            return;
+        }
+
+        setShowScanReceipt(true);
+    }
+
     return (
         <React.Fragment>
             <ButtonGroup>
-                <Button variant="warning" style={{marginRight: "20px"}}><div style={{ width: "40px"}}><i class="fa-solid fa-chart-line"></i></div></Button>
+                <Button variant="warning" onClick={handlePredictionShow} style={{marginRight: "20px"}}><div style={{ width: "40px"}}><i class="fa-solid fa-chart-line"></i></div></Button>
                 
+                <Modal show={showPrediction} onHide={handlePredictionClose}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>AI Prediction</Modal.Title>
+                    </Modal.Header>
+                </Modal>
+
                 <Button variant="success" onClick={handlePutShow}><div style={{ width: "40px" }}>+</div></Button>
                 <Button variant="danger" onClick={handleSpentShow}><div style={{ width: "40px" }}>-</div></Button>
 
-                <Button variant="info" style={{marginLeft: "20px"}}><div style={{ width: "40px"}}><i class="fa solid fa-receipt"></i></div></Button>
+                <Button variant="info" onClick={handleScanReceiptShow} style={{marginLeft: "20px"}}><div style={{ width: "40px"}}><i class="fa solid fa-receipt"></i></div></Button>
             </ButtonGroup>
             <Modal show={show} onHide={handleClose} >
                 <Modal.Header closeButton>
