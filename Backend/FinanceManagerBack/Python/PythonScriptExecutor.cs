@@ -13,9 +13,12 @@ namespace FinanceManagerBack.Python
             _config = config;
 
             var dllPath = _config.GetValue<string>("Python:DLLPath");
-            Runtime.PythonDLL = dllPath;
 
-            PythonEngine.Initialize();
+            if(Runtime.PythonDLL == null)
+            {
+                Runtime.PythonDLL = dllPath;
+                PythonEngine.Initialize();
+            }
         }
 
         public string RunPredictionScript(string category, int limit)
