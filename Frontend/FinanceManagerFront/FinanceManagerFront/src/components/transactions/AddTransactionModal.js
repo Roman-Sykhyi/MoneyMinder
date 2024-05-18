@@ -132,16 +132,6 @@ export default function AddTransaction(props) {
     }
 
     const handleScanReceiptShow = () => {
-        if(wallet.id === -1){
-            window.alert('You have to choose wallet first');
-            return;
-        }
-
-        if(currentCategory.id === -1) {
-            window.alert('You have to choose category first');
-            return;
-        }
-
         setShowScanReceipt(true);
     }
 
@@ -169,7 +159,7 @@ export default function AddTransaction(props) {
     return (
         <React.Fragment>
             <ButtonGroup>
-                <Button variant="warning" onClick={handlePredictionShow} style={{marginRight: "20px"}}><div style={{ width: "40px"}}><i class="fa-solid fa-chart-line"></i></div></Button>
+                <Button variant="warning" onClick={handlePredictionShow}><div style={{ width: "40px"}}><i class="fa-solid fa-chart-line"></i></div></Button>
                 
                 <Modal show={showPrediction} onHide={handlePredictionClose}>
                     <Modal.Header closeButton>
@@ -185,8 +175,6 @@ export default function AddTransaction(props) {
 
                 <Button variant="success" onClick={handlePutShow}><div style={{ width: "40px" }}>+</div></Button>
                 <Button variant="danger" onClick={handleSpentShow}><div style={{ width: "40px" }}>-</div></Button>
-
-                <Button variant="info" onClick={handleScanReceiptShow} style={{marginLeft: "20px"}}><div style={{ width: "40px"}}><i class="fa solid fa-receipt"></i></div></Button>
             </ButtonGroup>
             <Modal show={show} onHide={handleClose} >
                 <Modal.Header closeButton>
@@ -195,6 +183,7 @@ export default function AddTransaction(props) {
                 <Modal.Body>
                     <div>Enter the transaction size</div>
                     <input placeholder='Sum of money' type='number' min='1' value={transactionSize} onChange={(event) => {handleSumInput(event.target.value)}}></input>
+                    <Button variant="info" onClick={handleScanReceiptShow} style={{marginLeft: "20px"}}><div style={{ width: "40px"}}><i class="fa solid fa-receipt"></i></div></Button>
                     <div>Choose category</div>
                     <DefaultCategoriesDropdown className={s.dropdown} category={category} setCategory={setCategory} />
                 </Modal.Body>

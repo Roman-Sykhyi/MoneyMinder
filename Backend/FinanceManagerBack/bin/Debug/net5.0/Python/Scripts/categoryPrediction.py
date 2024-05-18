@@ -27,4 +27,4 @@ def main(dataPath, forecastSpending):
 			message = "Day when spending will be " + str(forecastSpending) + " : " + str(day + 1)
 			break
 
-	return str(forecasted_values.values) + "\n" + message
+	return str(forecasted_values.values)
