@@ -39,6 +39,11 @@ namespace FinanceManagerBack.Services
             return _context.Categories.Where(c => c.IsDefault).ToList();
         }
 
+        public Category GetCategoryById(int id)
+        {
+            return _context.Categories.FirstOrDefault(c => c.Id == id);
+        }
+
         private void AddDefaultCategoriesIfNotAdded()
         {
             foreach (var category in DefaultCategories)

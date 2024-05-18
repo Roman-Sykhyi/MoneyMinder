@@ -1,6 +1,7 @@
 using FinanceManagerBack.Data.Repositories;
 using FinanceManagerBack.Interfaces;
 using FinanceManagerBack.Models;
+using FinanceManagerBack.Python;
 using FinanceManagerBack.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
@@ -77,6 +78,7 @@ namespace FinanceManagerBack
             services.AddTransient<IWalletRepository, WalletRepository>();
             services.AddTransient<ICategoryLimitRepository, CategoryLimitRepository>();
             services.AddTransient<ICategoryLimitService, CategoryLimitService>();
+            services.AddTransient<IPythonScriptExecutor, PythonScriptExecutor>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

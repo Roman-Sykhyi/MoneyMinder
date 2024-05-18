@@ -370,3 +370,5 @@ E:\lpnu\diploma\MoneyMinder\Backend\FinanceManagerBack\obj\Debug\net5.0\FinanceM
 E:\lpnu\diploma\MoneyMinder\Backend\FinanceManagerBack\obj\Debug\net5.0\FinanceManagerBack.csproj.CopyComplete
 E:\lpnu\diploma\MoneyMinder\Backend\FinanceManagerBack\obj\Debug\net5.0\FinanceManagerBack.genruntimeconfig.cache
 E:\lpnu\diploma\MoneyMinder\Backend\FinanceManagerBack\obj\Debug\net5.0\ref\FinanceManagerBack.dll
+E:\lpnu\diploma\MoneyMinder\Backend\FinanceManagerBack\bin\Debug\net5.0\Python.Runtime.dll
+E:\lpnu\diploma\MoneyMinder\Backend\FinanceManagerBack\bin\Debug\net5.0\Python\Scripts\categoryPrediction.py
