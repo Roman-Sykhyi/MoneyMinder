@@ -4,6 +4,6 @@
     {
         string RunPredictionScript(string category, int limit);
 
-        void RunReceiptAnazyleScript();
+        string RunReceiptAnazyleScript(string imagePath);
     }
 }

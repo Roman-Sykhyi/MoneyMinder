@@ -58,6 +58,11 @@ export default function AddTransaction(props) {
         setShowPrediction(false);
     }
 
+    const handleScanReceiptClose = () => {
+        setShowScanReceipt(false);
+        setPreviewSrc(null);
+    }
+
     const handlePutShow = () => {
         if(wallet.id === -1){
             window.alert('You have to choose wallet first');
@@ -156,6 +161,46 @@ export default function AddTransaction(props) {
         },
       };
 
+      const [selectedFile, setSelectedFile] = useState(null);
+      const [previewSrc, setPreviewSrc] = useState(null);
+  
+      const handleFileChange = (event) => {
+          const file = event.target.files[0];
+          setSelectedFile(file);
+  
+          // Create a preview of the selected image
+          const reader = new FileReader();
+          reader.onloadend = () => {
+              setPreviewSrc(reader.result);
+          };
+          reader.readAsDataURL(file);
+      };
+  
+      const handleUpload = async () => {
+          if (!selectedFile) return;
+  
+          const formData = new FormData();
+          formData.append('file', selectedFile);
+  
+          
+          try {
+            const response = await apiClient.post(
+                process.env.REACT_APP_API_URL + "python/ocr",
+                formData
+            );
+            
+            if (response.status === 200) {
+                setTransactionSize(response.data.result)
+            } else {
+                window.alert('Upload failed');
+            }
+          } catch (error) {
+                window.alert('Error uploading file:' + error);
+          }
+
+          handleScanReceiptClose();
+      };
+
     return (
         <React.Fragment>
             <ButtonGroup>
@@ -184,6 +229,17 @@ export default function AddTransaction(props) {
                     <div>Enter the transaction size</div>
                     <input placeholder='Sum of money' type='number' min='1' value={transactionSize} onChange={(event) => {handleSumInput(event.target.value)}}></input>
                     <Button variant="info" onClick={handleScanReceiptShow} style={{marginLeft: "20px"}}><div style={{ width: "40px"}}><i class="fa solid fa-receipt"></i></div></Button>
+                        <Modal show={showScanReceipt} onHide={handleScanReceiptClose} >
+                            <Modal.Header><Modal.Title>Load Receipt</Modal.Title></Modal.Header>
+                            <Modal.Body>
+                                <div>
+                                    <input type="file" accept="image/*" onChange={handleFileChange} />
+                                    <button onClick={handleUpload}>Upload</button>
+                                    <div>
+                                    {previewSrc && <img src={previewSrc} alt="Selected Preview" width="250" />}</div>
+                                    </div>
+                            </Modal.Body>
+                        </Modal>
                     <div>Choose category</div>
                     <DefaultCategoriesDropdown className={s.dropdown} category={category} setCategory={setCategory} />
                 </Modal.Body>
